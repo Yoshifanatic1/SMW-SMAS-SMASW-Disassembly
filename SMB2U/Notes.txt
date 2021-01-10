@@ -1,0 +1,111 @@
+Level Sprite IDs
+00 - Recovery heart
+01 - Red shy guy
+02 - Tweeter
+03 - Blue shy guy
+04 - Porcupo
+05 - Red snifit
+06 - Grey snifit
+07 - Blue snifit
+08 - Ostro
+09 - Bob-omb
+0A - Left flying Albatoss (carrying bob-omb)
+0B - Right flying Albatoss
+0C - Left flying Albatoss
+0D - Ninji (follow player)
+0E - Ninji (jump in place)
+0F - Yellow Beezo
+10 - Red Beezo
+11 - Wart's bubble 
+12 - Pidget
+13 - Trouter
+14 - Hoopster
+15 - Vase spawner (Red shy guy)
+16 - Vase spawner (Bob-omb)
+17 - Phanto
+18 - Cobrat (In vase)
+19 - Cobrat (wait in ground)
+1A - Pokey
+1B - Round bullet
+1C - Birdo
+1D - Mouser
+1E - Birdo egg
+1F - Triclyde
+20 - Fireball
+21 - Clawgrip
+22 - Clawgrip's rock
+23 - Red panser
+24 - Blue panser
+25 - Green panser
+26 - Autobomb
+27 - Autobomb fireball
+28 - Water spout
+29 - Flurry
+2A - Fryguy
+2B - Mini Fryguy
+2C - Wart
+2D - Hawkmouth boss
+2E - Spark (slow, counterclockwise)
+2F - Spark (fast, counterclockwise)
+30 - Spark (slow, clockwise)
+31 - Spark (fast, clockwise)
+32 - Small veggie
+33 - Large veggie
+34 - ?? (Weird veggie)
+35 - Koopa shell
+36 - Coin
+37 - Bomb?
+38 - Rocket ship
+39 - Mushroom block
+3A - POW block
+3B - Falling log
+3C - Door
+3D - Key
+3E - Potion
+3F - Mushroom
+40 - 1-Up
+41 - Magic carpet
+42 - Hawkmouth (face right)
+43 - Hakwmouth (face left)
+44 - Crystal
+45 - Star
+46 - Stopwatch
+47 - Albatoss (carrying bob-omb) generator
+48 - Yellow beezo generator
+49 - Turn off generators
+4A - Veggie generator
+4B+ (Crashes)
+
+
+Level Data header:
+byte 00
+%XYYYYYYY
+X = Horizontal level flag
+
+byte 01
+%XXXYYYY
+XXX = ???
+YYYYY = ???
+
+byte 02
+%XXXXYYZZ
+XXXX = Number of screens in level
+YY = ???
+ZZ = ???
+
+byte 03
+%XXYYYZZZ
+XX = ???
+YYY = Generic ground type?
+ZZZ = ???
+
+Vase Objects IDs
+00 = Top left wall
+01 = Top Right wall
+02 = Bottom Row with breakable blocks
+03 = Bottom Row with staircase edges
+04 = Bottom Row with staircase edges and breakable blocks
+05 = Bottom Row with breakable blocks and rectangular lower section
+06 = Bottom Row with sand blocks and sand filled lower section (upper)
+07 = Bottom Row with sand blocks and sand filled lower section (lower, no phanto)
+08 = Bottom Row with sand blocks and sand filled lower section (lower, phanto)

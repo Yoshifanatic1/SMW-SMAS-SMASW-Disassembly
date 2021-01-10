@@ -1,0 +1,138 @@
+(1/9/20)
+
+General:
+- Created a Japanese version of the standalone ROMs.
+
+;--------------------------------------------------------------------
+
+(10/26/20)
+SMB1:
+SMBLL:
+- Move all its exclusive graphics to the SMB1 folder and made SMBLL pull all its graphics from the SMB1 folder.
+
+SMB2U:
+
+SMB3:
+- Removed the BG Cloud Code file from the folder. This was a temporary file containing modified code from Southbird's NES SMB3 disassembly to help me fix sprite 49.
+- Documented a few more RAM addresses.
+
+SMAS:
+- Added support for the USA, PAL, and both Japanese versions of normal SMAS.
+- Updated the RAM defines to the new format.
+- Documented all the remaining RAM addresses
+
+General:
+- Removed all graphics, music, and sample files, and provided a script to extract them from any clean, headerless SMAS/SMAS+W ROM
+- Made it easier to edit the copyright and region error screen for SMAS and all the standalone ROMs that have one.
+- Made this disassembly work with framework version 1.0.0
+- Updated the PAL versions of all the standalone ROM hacks to change the licensee byte to $01. The old byte of $33 indicated that these ROMs used the expanded header, even though they don't.
+- Removed a few blank files that were filled with 00s, as they can be handled with %FREE_BYTES() now while also allowing those spaces to be treated as freespace.
+
+;--------------------------------------------------------------------
+
+(7/3/20)
+SMB1:
+- Identified a bunch of routines and RAM addresses.
+
+SMB2U:
+- Formatted the story text to be easier to edit.
+
+SMB3:
+- Isolated a bunch of routines, mostly sprite related ones.
+- Documented a few more RAM addresses
+- Formatted various textbox text to be easier to edit.
+
+;--------------------------------------------------------------------
+
+(1/3/20)
+SMB1:
+- Made it possible to assemble as a standalone ROM, either USA or PAL
+
+SMBLL:
+- Made it possible to assemble as a standalone ROM, either USA or PAL
+
+SMB2U:
+- Made it possible to assemble as a standalone ROM, either USA or PAL
+- Documented a lot of RAM addresses and identified a lot of routines.
+
+SMB3:
+- Made it possible to assemble as a standalone PAL ROM.
+- Isolated a couple routines and documented a couple more RAM addresses
+- Fixed a bug with the standalone version that caused the erase game function to corrupt the save data.
+- Fixed a bug with the standalone version where certain hardware registers were not being initiallized.
+- Removed the unused SMAS music bank and random chatter sample bank. This freed up enough space that bank 1E is now completely free. It also sped up the initial loading time by about 0.75 seconds.
+
+SMAS:
+- Disassembled the SMAS SPC engine.
+- Added defines for all the music and sound effects.
+
+;--------------------------------------------------------------------
+
+(7/5/19)
+SMB1:
+- Fully disassembled this game, both USA and PAL.
+- Added a bunch of commonly used RAM addresses to the RAM Map file.
+- Added a reference sheet showing the player poses similar to the SMW one.
+
+SMBLL:
+- Fully disassembled this game, both USA and PAL.
+
+SMB2U:
+- Fully disassembled this game, both USA and PAL.
+- Added a bunch of commonly used RAM addresses to the RAM Map file.
+
+SMB3:
+- Fully disassembled this game, both USA and PAL.
+- Added a bunch of commonly used RAM addresses to the RAM Map file.
+- Split GFX_388000.bin into two files, because the pause menu graphics within aren't exclusive to SMB3.
+- Made it possible to assemble as a standalone ROM.
+
+SMAS:
+- Isolated every routine.
+- Changed the game ID for SMB2J to SMBLL.
+- Made the pause menu graphics be uploaded during assembly.
+- Fixed an oversight where game specific patches would not get applied if SMAS was set to be a hacked ROM. This only applies to integrated patches, as those ones are meant to remap themselves based on the location of routines.
+- Assembling all the games in the USA version now assembles every byte in some way.
+- Fixed a bug where the printed bytes for bank 00 would be wrong due to the useage of structs
+- Fixed the code/data misalignments in bank 00 that caused by not assembling all 5 games.
+- Fixed a bug where certain functions of the EndOfROM macro would be executed for each of the games.
+- Identified the "unknown data" files. Also did a rough disassembly of the SPC engine.
+- Removed UnknownCode.txt, because that code was for SMBLL.
+- Made it so that only the SMAS ROM Map file is loaded when assembling this game. Before, all 6 ROM Map files were loaded.
+
+;--------------------------------------------------------------------
+
+(1/8/19)
+SMB3:
+- Restructured this disassembly to be in line with how SMW/SMAS are set up.
+
+SMAS:
+- Added in defines for various RAM addresses
+- Made it possible to disable SMB3 from assembling if assembling SMAS.
+- Isolated the code for several routines.
+- Added an option to disable the copy protection checks in order to allow one to safely change the SRAM size of SMAS+W.
+
+;--------------------------------------------------------------------
+
+(1/4/19)
+SMB3:
+- Disassembled part of SMB3. It's not much, but enough to get you to the map screen at least.
+
+;--------------------------------------------------------------------
+
+(10/23/18)
+SMAS:
+- Added support for both the USA and PAL versions of SMAS+W. The SMAS+W menu and title screen have been disassembled and is handled separately from SMW.
+- Removed certain SMAS+W macros from SMW's files and moved them to be within the SMAS files.
+
+;--------------------------------------------------------------------
+
+(9/13/18)
+SMAS:
+- Worked a bit more on adding SMAS+W SMW support.
+
+;--------------------------------------------------------------------
+
+(8/20/18)
+SMAS:
+- Initial release. This was when I first started supporting SMAS, when I rearranged the folder structure of the SMW disassembly to make this into a SMAS+W disassembly.

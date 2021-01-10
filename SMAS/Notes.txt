@@ -1,0 +1,25 @@
+Save File offsets:
+
+SMB1:
+File 1: $700010
+File 2: $700130
+File 3:
+File 4:
+
+SMBLL:
+File 1:
+File 2:
+File 3:
+File 4:
+
+SMB2U:
+File 1:
+File 2:
+File 3:
+File 4:
+
+SMB3:
+File 1: $70002A-$70012F
+File 2: $70014A
+File 3:
+File 4:

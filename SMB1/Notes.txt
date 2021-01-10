@@ -1,0 +1,66 @@
+Level Sprite IDs
+
+00 - Green Koopa
+01 - Red Koopa
+02 - Buzzy Beetle
+03 - Red Koopa
+04 - Green Koopa (Upsidedown Red Piranha in SMBLL)
+05 - Hammer bro.
+06 - Goomba
+07 - Blooper
+08 - Bullet Bill
+09 - Yellow Stationary Parakoopa
+0A - Green swimming cheep cheep
+0B - Red swimming cheep cheep
+0C - Podoboo
+0D - Green Piranha Plant
+0E - Green Bouncing Parakoopa (also its code is shared by the star power up)
+0F - Red Vertical Parakoopa
+10 - Green Horizontal Parakoopa
+11 - Lakitu
+12 - Spiny
+13 - ??? (Weird glitchy enemy sprite)
+14 - Flying Red Cheep Cheep Generator
+15 - Bowser Fire Generator
+16 - Fireworks Generator (Unused in SMBLL?)
+17 - Bullet Bill Generator
+18 - Remove Lakitu Generator
+19 - Nothing
+1A - Nothing
+1B - Slow Clockwise Firebar
+1C - Fast Clockwise Firebar
+1D - Slow Counterclockwise Firebar
+1E - Fast Counterclockwise Firebar
+1F - Large Clockwise Firebar
+20 - Firebar (Doesn't move?)
+21 - Firebar (Doesn't move?)
+22 - Firebar (Doesn't move?)
+23 - Nothing
+24 - Girder Platform Attached To Pulley
+25 - Vertically Moving Girder Platform
+26 - Screen Wrapping Up Moving Girder Platform
+27 - Screen Wrapping Down Moving Girder Platform
+28 - Horizontal Girder Platform
+29 - Weighed Down Girder Platform
+2A - Right Moving Girder Platform
+2B - Small Upwards Moving Girder Platform Lift
+2C - Small Downwards Moving Girder Platform Lift
+2D - Bowser
+2E - Power up
+2F - Vine
+30 - Flag Pole
+31 - Goal object
+32 - Red Springboard
+33 - Bullet Bill Launcher
+34 - Warp Zone
+35 - Toad/Peach
+36 - Unused sprite (Crashes!)
+37 - Spawn two goombas/buzzy beetles at Y = B0
+38 - Spawn three goombas/buzzy beetles at Y = B0
+39 - Spawn two goombas/buzzy beetles at Y = 70
+3A - Spawn three goombas/buzzy beetles at Y = 70
+3B - Spawn two green koopas beetles at Y = B0
+3C - Spawn three green koopas beetles at Y = B0
+3D - Spawn two green koopas beetles at Y = 70
+3E - Spawn three green koopas beetles at Y = 70
+3F - Unused sprite (Crashes!)

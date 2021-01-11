@@ -1,0 +1,216 @@
+(1/9/21)
+- Changed one of the commented out save text lines to display the correct text.
+- Fixed an oversight where the asset extraction pointers for the Japanese version's level and overworld music were off by $18.
+
+;--------------------------------------------------------------------
+
+(10/26/20)
+- Removed all graphics and sample files, and provided a script to extract them from any clean, headerless SMW ROM
+- Made this disassembly work with framework version 1.0.0
+- Removed major copyrightable assets and added a script to extract them from a ROM.
+- Changed the .cbn filename for compressed graphics to .lz1 for the Japanese, PAL (Rev. 1), and SMAS+W ROMS, and .lz2 for all other versions.
+
+;--------------------------------------------------------------------
+
+(7/3/20)
+- Fixed an oversight where the only PER instruction in the ROM used a RAM label instead of an address label.
+- Modified !Define_SMW_Sound1DF9_IncreaseMusicTempo to be $FF and added it to the code.
+- Added the powerup sprite defines in a couple previously missed locations.
+
+;--------------------------------------------------------------------
+
+(1/3/20)
+- Moved the garbage data in the SPC files to the freespace areas in Routine_Macros_SMW.asm
+- Removed all the "Overworld00" files from the overworld folder. These files were leftovers for something I originally was going to do, but abandoned.
+- Updated the ROUTINE_SMW_DrawOverworldPlayer macro with some additional info.
+- Added some more Lunar Magic RAM addresses to the RAM map file and updated the format of the defines.
+- Corrected an oversight where the Mario and Luigi score defines were in reverse order.
+- Added some new RAM defines for common sprite related functions, a couple for the bob-omb, and removed a bunch of redundant defines
+- Updated the EmptySpace macros to include more information about the Lunar Magic hacks they contain.
+- Removed the conditionals checking !Define_Global_IgnoreCodeAlignments from the EmptySpace macros since these are redundant with the addition of !Define_Global_IgnoreOriginalFreespace
+
+;--------------------------------------------------------------------
+
+(7/5/19)
+- Appended "SMW" to all the routine macro names, SMW specific macros, structs, and namespaces. This will help prevent naming conflits with other games.
+- Included Vitor Vilela's SA-1 pack as a built in patch. Currently, it's not fully integrated and untested, but it's a start.
+- Added a partially complete patch that is intended to extract Lunar Magic ASM from a hacked ROM.
+- Fixed an oversight where ROUTINE_SMW_OverworldProcess0A_SwitchBetweenSubmaps() did not have a namespace.
+- Added in the ROM address offsets used by the routine position hardcoding function for the Japan, Arcade, and 2 PAL versions.
+
+;--------------------------------------------------------------------
+
+(1/8/19)
+- Added in defines for the SMW overworld maps.
+- Removed the "&$7F" on the bank bytes for the compressed graphics, as asar 1.71 fixed the behavior of check bankcross.
+- The freespace block at $0BFD0D no longer throws an error when hardcoding its position for the same reason as the above change.
+
+;--------------------------------------------------------------------
+
+(1/4/19)
+- Added support for both the PAL V1.0 and PAL V1.1 ROM, which means that the disassembly now supports all 7 SNES versions of SMW!
+- Removed some of the folders in the SMW GFX folder, since only the Japan, and PAL 1.1/SMAS+W PAL have different compressed graphics than the USA version.
+- Cleaned up the code for inserting the original SMW's freespace.
+- Added decompressed graphics files for PAL V1.1/SMAS+W PAL.
+- Added some more LM Hijack locations.
+- Updated the level insertion macro to use asar 1.70's ability to use math on incbin offsets. This speed up compilation time by another 5 seconds.
+
+;--------------------------------------------------------------------
+
+(10/23/18)
+- Heavily modified the macro used to insert levels to significantly reduce the number of files in the levels folder. This folder's filesize went from ~10 MB to ~784 KB.
+- Made all the non-standard levels use MWLs to insert their data.
+- Removed the RtNum system, which sped up compilation time by ~10 seconds.
+- Removed Settings_SMW.asm and merged it with Global_Definitions.asm.
+- Removed some things from ROM_Map_SMW.asm and moved them to a new file called Main_SMW.asm. This is to make it easier to use a different ROM map if SMAS+W is assembled.
+- Renamed a lot of RAM labels and added SMW to them to indicate that they're SMW RAM addresses.
+- Added a lot of new defines for various things in SMW, such as sprite IDs, gamemodes, stripe images, and more.
+
+;--------------------------------------------------------------------
+
+(10/1/18)
+- Isolated all the remaining code/data into macros.
+- Changed the conditionals for checking version differences. It's now possible to check for multiple versions in the same conditional.
+- Moved the Pictures folder to the SMW folder and added a picture showing the player poses.
+- Renamed certain routine macros for shared sprites. Such macros have their sprite number listed as XX/XXX.
+- Renamed some RAM labels, mostly ones related to the scroll sprites.
+- Removed a decent chunk of sprite specific RAM defines that were redundant. Also added a bunch more, mostly for cutscene sprites to make it clear what those routines are doing.
+- Removed StripeImageText.asm and merged that into Routine_Macros_SMW.asm so all the routine macros will be in one spot
+- Every ROM bank SMW uses can now easily be moved around freely. The ROM bank assigned as bank 00 will also automatically get an SNES header.
+- Added more Lunar Magic hijack labels.
+
+;--------------------------------------------------------------------
+
+(9/13/18)
+- Isolated more code, particularly ones related to the castle destruction cutscenes and various random ones.
+- Added a batch script for extracting custom backgrounds from a SMW ROM.
+- Created a new patch for the debug functions, which also helps demonstrate how to use #Labels to have hijack locations that aren't hardcoded.
+- Created a new WIP patch for printing out the location of the Lunar Magic labels to make it possible for one to tell if said label is at its proper location.
+- Made every opcode have an opcode length specifier (.b/.w/.l) for consistency.
+- Modified every routine macro that's not an INLINE one to use namespaces.
+- Combined a lot of macros in order to reduce the number of macro declarations in an attempt to speed up compilation time.
+- Worked a bit more on adding SMAS+W SMW support.
+- Moved all the misc defines to a separate file.
+
+;--------------------------------------------------------------------
+
+(8/20/18)
+- Added full support for the arcade version of SMW. However, unlike the Japanese version, this support is not 100% perfect due to the only copy of the ROM I could find likely not being a perfect dump.
+- Isolated the code for more routines, particularly Normal sprite related routines.
+
+;--------------------------------------------------------------------
+
+(7/28/18)
+- Added full support for the Japanese version of SMW. Every single difference between the US and JP version is accounted for in the disassembly.
+- Isolated more code/data, mostly random ones.
+- Included a patch that changes the pointers for sublevels 025-046 to point to level data not part of the standard 512 sublevels. This is to both demonstrate how to set up patches within this disassembly and to make it possible to view this level data easily in LM.
+- Created MWLs of the standard 512 sublevels for the 3 versions of SMW that Lunar Magic supports. Layer 1, Layer 2 (level), and sprite data is now extracted from them when inserting the original SMW level data.
+- Added a table file for the Japanese Hiragana and Katakana characters used in the Japanese version of SMW. However, asar doesn't support Unicode encoded .txt files, so you can't use this.
+
+;--------------------------------------------------------------------
+
+(7/5/18)
+- Isolated the code for more routines, particularly overworld, loading letter, and standard scrolling related code.
+- Re-added version exclusive code into some routines. This code is handled with if/else statements.
+- Updated some of the unknown RAM labels, as I've figured out their function.
+
+;--------------------------------------------------------------------
+
+(6/19/18)
+- Isolated more routines, particularly the code for every object, most extended sprites, many Normal sprites, and various credits related routines.
+- Added more info regarding various Lunar Magic hijacks. This includes a bit more information on where LM inserts some of its custom routines as well as info on how the data in some tables is laid out.
+- Added lots of comments for various tables to make it clear what exactly uses each set of bytes for a given table.
+- Made the semicolon dividers larger and bolder to make it easier to see when a set of related routines begin/end.
+- Changed the Init/Main labels for the Normal sprite macros to Status01/Status08. This is to avoid confusion, since a .Main label is frequently used to signify the main entry point in a routine.
+- Added my overworld extractor to the bin folder. The files it extracts are currently not used by the disassembly however.
+
+;--------------------------------------------------------------------
+
+(6/2/18)
+- Isolated the code for more routines, particularly a ton of Normal sprite routines (including some of the larger ones like Bowser, adult Yoshi and the Koopa Kids) as well as some miscellaneous routines (ex. SubOffscreen, GivePoints, GenerateTile, DespawnNonBossSprites, etc.)
+- Rewrote the routine inserting system to simplify things. Instead of separate macros for different types of code/data, the code/data macros will be prefixed with a tag to identify them. ROUTINE for code macros, DATATABLE for data, INLINEROUTINE for code that is either duplicated or routines that are attached to an otherwise unrelated routine.
+- Created a system that specifies which part of a routine to insert so that split up routines and routines that have copies can be inserted in different locations.
+- Created a macro that makes it easier to edit the path of the Creating/Eating Block.
+- Removed Routine_Macros(Optimized).asm and AltVersionMacros.asm for the time being, as I want to focus more on just getting the US ROM fully disassembled.
+- Made it easier to edit the shared palettes with Lunar Magic.
+
+;--------------------------------------------------------------------
+
+(5/14/18)
+- More routines have had their code isolated, particularly a lot of ones related to Mario's block collision, a few overworld related routines, and non-Normal sprites (Minor Extended, Overworld, Cluster, Smoke, Shooter, Generator).
+- Added more notes regarding Lunar Magic hijacks.
+- Organized more tables, particularly the ones in LoadOverworldSprites, to better reflect how they're actually referenced.
+- Added a define to set the number of overworld sprite slots there are.
+- Added a macro called "InsertSubroutine" that's meant for code that is part of some routine, but is referenced by other routines to make it easier to find dependencies. For example, the overworld piranha plant's graphics routine (GenericOverworldSpriteGFXRt) is called by every other overworld sprite.
+- Modified some defines and RAM addresses to make them dependent on others to reflect how they work within SMW's coding. For example, !Define_MaxSmokeSpriteSlot is tied to the value of !Define_MaxQuakeSpriteSlot because smoke sprites are processed in the same loop that handles quake/bounce sprites (ProcessQuakeSprites).
+
+;--------------------------------------------------------------------
+
+(4/24/18)
+- Added more routines to Routine_Macros.asm, particularly some of the titlescreen gamemodes, some normal sprite main routines, and many normal sprite inits/bank wrappers from bank 1.
+- Added a few more Lunar Magic related notes.
+- Added a pictures folder that contains images that show stuff that can't easily be seen in Lunar Magic.
+- Included a PDF of the US SMW manual.
+- Added defines for the sound effects/music to make it easier to change which sounds/music plays where.
+- Made it easier to edit the status bar. Modifying the initially loaded tilemap will automatically update the location of the counters to reflect the changes you make.
+- Disassembled the graphics decompression routine from the Pal 1.1 ROM, as that version's graphics are stored in a slightly different way compared to the other versions for some reason (the only difference I saw was an extra XBA somewhere).
+
+;--------------------------------------------------------------------
+
+(4/19/18)
+- Added a new file called AltVersionMacros.asm that contains routines that have version differences in them. This is how I'll handle these version differences without cluttering up the main disassembly. Currently, there are a couple routines from the JP ROM and SMAS+W.
+- Added a define that lets you change which version of SMW to assemble. It might not work correctly.
+- Added some defines that let one change when IRQs are set to trigger in the original SMW.
+- Added more routines to Routine_Macros.asm. Mainly NMI/IRQ ones and some level load routines.
+- Updated the compression.bat script to be the one I'm using for MYSQ. This one removes the possibility of accidentally compressing compressed graphics and vice versa by moving the compressed graphics to a separate folder. However, there currently is no decompressed version of GFX27.bin because the tool used to make it editable refuses to work on my computer. If someone could send me a decompressed version of it from both the US and JP ROMs, I'd appreciate it.
+- Created a bunch of GFX files for the JP ROM's graphics and one for Luigi's in SMAS+W. None of these currently get inserted into the assembled ROM though.
+- Marked comments with different labels to indicate what it is. For example "Optimization:" mention how some bit of code could be optimized, while "LM:" refers to something Lunar Magic does at the commented portion.
+- Made more progress with the stripe image text. The enemy name stuff is now done (at least for the US ROM) and I've started on the castle destruction cutscene text.
+- Added a define that lets you change what SMW's direct page register is set to throughout SMW. Probably not a good idea to set this to anything besides $0000, but the option is there.
+
+;--------------------------------------------------------------------
+
+(4/16/18)
+- Add more routines to Routine_macros.asm. Mainly various sprite related ones along with a handful of others.
+- Made the SMW level tile animations editable in a Lunar Magic -esque fashion.
+- Organized the level tile animations frame table to be more organized based on the frame it is executed and whether the animation is global, tileset specific or an alternate state of a global animation.
+- Made the shared palette table use a Lunar Magic generated smw.pal shared file. Note that 2.53 doesn't export all the palettes but FuSoYa has fixed this for the next version.
+- Added a .txt file that documents SMAS+W routines outside of the bank $30 range that pertain to SMW. Currently, it only has the NMI and IRQ routines.
+
+;--------------------------------------------------------------------
+
+(4/12/18)
+- All known hardcoded RAM addresses now have labels and all the old ones have been replaced. Some multipurpose RAM addresses currently have one label, but they eventually will have multiple labels for each function.
+- Modified some RAM tables to use the structs introduced in asar 1.50.
+- Made some progress towards making various stripe image text easily editable.
+- Modified a few more tables to have 16-bit entries.
+- A few other small, miscellaneous changes.
+
+;--------------------------------------------------------------------
+
+(4/8/18)
+- Added more labels for various RAM addresses, particularly sprite tables.
+- Added some defines that allow you to change where SMW uploads most stuff to VRAM, which pair of sprite sizes are used, as well as the location of some palette animations. However, due to how SMW was coded, some VRAM upload locations can't be changed (I'll make these changeable in the optimized code, though).
+- Made some tables have 16-bit entries for tables read when A, X, or Y is 16-bit.
+- Added some placeholders in the RAM map to indicate what RAM addresses still need a label.
+- Corrected a couple weird table labels, such as the ones used by the dolphin generator (GenerateDolphin).
+
+;--------------------------------------------------------------------
+
+(4/7/18)
+- Added more labels for various RAM addresses, particularly some of the larger tables and SRAM. Also, many of the empty/unused ones are now marked.
+- Made it so that map16 data is handled with a Lunar Magic 2.50+ .map16 file.
+- Created some macros that can be used to generate labels for RAM tables. I'm not sure if I'll actually use them, as they increase compile time by a lot.
+- Fixed an issue with the optimized BufferBGTilemap that would cause SMW to crash if used.
+- Added a define for changing the checksum compliment.
+- Added two more routines to the routine macros file: The one that handles compressing the OAM tile size buffer and the one that uploads sprite tiles to the OAM.
+
+;--------------------------------------------------------------------
+
+(4/6/18)
+- Initial release (the changes listed below reflect what changes since I decided to update galaxyhaxz's disassembly)
+- Modified all the hardware register defines and added/replaced many RAM defines (there are still plenty of the older ones still present though).
+- Made all register/RAM defines 24-bit. The size of these defines are handled with each individual opcode rather than with the define itself.
+- Put all the code in main.asm so it will be easier to modify the hardcoded RAM addresses.
+- Moved a handful of routines with all their RAM labelled to a separate file. Routine_Macros.asm is where all code and data will be located eventually, while Routine_Macros(Optimized).asm will contain optimized versions of those routines.
+- Fixed a couple errors in the existing disassembly (ex. Table $038000 is not unused and  $02AABD is a JMP instruction to $02AA33, not a data table).

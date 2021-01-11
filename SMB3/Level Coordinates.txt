@@ -1,0 +1,357 @@
+y_x
+World 1
+2x4	; 1-1
+2x6	; Hammer bro.
+2x8	; 1-2
+2xa	; 1-3
+2xc	; Hammer bro.
+4x2	; Unused level 06 (Start tile)
+4x4	; Hammer bro.
+4x8	; Hammer bro.
+4xa	; 1-4
+4xc	; Toad house
+6x4	; Hammer bro.
+6x6	; World 1 Fortress
+6x8	; Spade
+8x4	; Hammer bro.
+8x6	; Toad house
+8x8	; Hammer bro.
+8xa	; Hammer bro.
+8xc	; World 1 airship
+ax4	; 1-5
+ax6	; Hammer bro.
+ax8	; 1-6
+
+World 2
+
+2x4	; Spade
+2x6	; Hammer bro.
+2x8	; 2-2
+2xa	; Hammer bro.
+2xc	; Hammer bro.
+2xe	; Toad house
+4x4	; Hammer bro.
+4x6	; Hammer bro.
+4x8	; Hammer bro.
+4xa	; Hammer bro.
+4xc	; 2-3
+4xe	; Hammer bro.
+6x4	; 2-1
+6x8	; World 2 fortress
+6xa	; Hammer bro.
+6xc	; Hammer bro.
+6xe	; Pipe level
+8x4	; Hammer bro.
+8x6	; Toad house
+8x8	; Pipe level
+8xc	; Hammer bro.
+8xe	; Hammer bro.
+ax2	; Hammer bro. (Start tile)
+ax4	; Hammer bro.
+ax6	; Hammer bro.
+ax8	; Hammer bro.
+axe	; Spade
+2x10	; Hammer bro.
+2x12	; 2-4
+2x14	; Hammer bro.
+2x16	; Hammer bro.
+2x18	; Toad house
+4x10	; Angry Sun level
+4x14	; Hammer bro.
+4x18	; Hammer bro.
+6x10	; Hammer bro.
+6x12	; World 2 airship
+6x14	; Hammer bro.
+6x18	; Hammer bro.
+6x1A	; Hammer bro.
+8x10	; 2-5
+8x12	; Hammer bro.
+8x14	; Pyramid
+8x1A	; Hammer bro.
+ax10	; Hammer bro.
+ax12	; Hammer bro.
+ax14	; Hammer bro.
+
+World 3
+2x2	; Toad house
+2x4	; Hammer bro.
+2x6	; Hammer bro.
+2x8	; 3-3
+2xa	; Toad house
+2xc	; Hammer bro.
+2xe	; Hammer bro.
+4x4	; 3-2
+4x8	; Hammer bro.
+4xc	; 3-4
+4xe	; Hammer bro.
+6x4	; Hammer bro.
+6x6	; Spade
+6x8	; World 3 Fortress 1
+6xa	; Hammer bro.
+6xc	; Hammer bro.
+6xe	; Hammer bro.
+8x4	; 3-1
+8x8	; Hammer bro.
+8xa	; Pipe level
+8xc	; 3-5
+8xe	; Hammer bro.
+ax2	; Hammer bro. (Start tile)
+ax4	; Pipe level
+ax6	; Spade
+ax8	; Hammer bro.
+axa	; Pipe level
+2x10	; 3-6
+2x12	; Hammer bro.
+2x14	; 3-7
+2x16	; Hammer bro.
+4x10	; 3-8
+4x12	; Hammer bro.
+4x14	; Spade
+4x16	; World 3 Fortress 2
+5x1a	; Spade
+5x1c	; Toad house
+6x10	; Hammer bro.
+6x12	; 3-9
+6x14	; Pipe level
+6x16	; Pipe level
+7x18	; Hammer bro. (Glitched)
+7x1a	; Toad house
+7x1c	; Spade
+8x10	; Hammer bro.
+8x12	; Hammer bro.
+8x14	; Hammer bro.
+2x20	; Hammer bro.
+2x22	; Toad house
+8x29	; World 3 airship
+8x2b	; Hammer bro.
+8x2d	; Pipe level
+
+World 4
+4x2	; Hammer bro. (Start tile)
+4x4	; Pipe level
+4xa	; Toad house
+4xc	; 4-6
+4xe	; Hammer bro.
+6x2	; Hammer bro.
+6x8	; World 4 airship
+6xa	; Hammer bro.
+6xc	; Hammer bro.
+6xe	; World 4 Fortress 2
+8x2	; Pipe level
+8xa	; Spade
+8xc	; 4-5
+8xe	; Hammer bro.
+4x10	; Hammer bro.
+4x12	; Pipe level
+4x14	; World 4 Fortress 1
+4x16	; Hammer bro.
+4x18	; 4-3
+4x1a	; Hammer bro.
+4x1c	; 4-2
+6x10	; Hammer bro.
+6x12	; Hammer bro.
+6x14	; Hammer bro.
+6x16	; Spade
+6x1a	; Toad house
+6x1c	; Hammer bro.
+8x10	; Hammer bro.
+8x12	; Hammer bro.
+8x14	; 4-4
+8x18	; Toad house
+8x1a	; Pipe level
+8x1c	; 4-1
+ax14	; Toad house
+
+World 5
+2x2	; Hammer bro.
+2x4	; 5-2
+2x6	; Toad house
+2x8	; 5-3
+2xa	; Hammer bro.
+4x2	; 5-1
+4x4	; Pipe level
+4x6	; Pipe level
+4x8	; Hammer bro.
+4xa	; Hammer bro.
+4xc	; Tower level
+6x2	; Hammer bro.
+6x4	; World 5 fortress 1
+6x6	; Hammer bro.
+6x8	; Hammer bro.
+6xa	; Hammer bro.
+8x2	; Hammer bro. (Start tile)
+8x4	; Hammer bro.
+8x6	; Spade
+8x8	; Hammer bro.
+2x1e	; Toad house
+4x18	; Exit to Surface Level
+4x1c	; Hammer bro.
+4x1e	; 5-5
+6x16	; Hammer bro.
+6x18	; Hammer bro.
+6x1a	; 5-4
+6x1c	; Hammer bro.
+6x1e	; Spade
+8x14	; Spade
+8x16	; Hammer bro.
+8x18	; World 5 fortress 2
+8x1a	; Hammer bro.
+8x1c	; 5-7
+8x1e	; Hammer bro.
+ax12	; World 5 airship
+ax14	; Hammer bro.
+ax16	; 5-9
+ax18	; 5-8
+ax1a	; Hammer bro.
+ax1c	; Toad house
+ax1e	; 5-6
+
+World 6
+2xc	; Toad house
+4x8	; Hammer bro.
+4xa	; 6-2
+4xc	; Hammer bro.
+4xe	; Pipe level
+6x2	; Hammer bro. (Start tile)
+6x4	; Hammer bro.
+6x6	; 6-1
+6x8	; Spade
+6xa	; World 6 fortress 1
+6xc	; Hammer bro.
+6xe	; Hammer bro.
+8x4	; Pipe level
+8x8	; Hammer bro.
+8xa	; Hammer bro.
+8xc	; 6-3
+8xe	; Spade
+2x16	; Pipe level
+2x18	; Hammer bro.
+2x1a	; Hammer bro.
+4x18	; Hammer bro.
+4x1a	; Hammer bro.
+4x1c	; Hammer bro.
+6x10	; Pipe level
+6x12	; Hammer bro.
+6x14	; 6-6
+6x16	; Hammer bro.
+6x18	; World 6 fortress 2
+6x1a	; Hammer bro.
+6x1c	; 6-8
+6x1e	; Hammer bro.
+8x10	; 6-4
+8x12	; Hammer bro.
+8x14	; Toad house
+8x16	; Hammer bro.
+8x18	; Hammer bro.
+8x1a	; Hammer bro.
+8x1c	; 6-7
+ax12	; Hammer bro.
+ax14	; 6-5
+ax16	; Hammer bro.
+ax18	; Hammer bro.
+ax1a	; Spade
+ax1c	; Hammer bro.
+4x20	; 6-9
+4x22	; Hammer bro.
+4x24	; Hammer bro.
+6x20	; Hammer bro.
+6x22	; World 6 fortress 3
+6x24	; Hammer bro.
+6x26	; Hammer bro.
+6x28	; Hammer bro.
+6x2a	; Hammer bro.
+6x2c	; World 6 airship
+8x20	; Hammer bro.
+8x22	; Hammer bro.
+8x24	; 6-10
+
+World 7
+3x2	; Hammer bro. (Start tile)
+3x4	; Hammer bro.
+3x6	; Hammer bro.
+3x9	; Pipe level
+3xd	; Pipe level
+3xf	; World 7 fortress 1
+5x2	; 7-1
+5x4	; Pipe level
+5x6	; Pipe level
+5x9	; Toad house
+5xb	; Pipe level
+5xd	; Muncher level 1
+5xf	; Hammer bro.
+7x3	; Pipe level
+7x5	; Pipe level
+7x8	; Hammer bro.
+7xa	; 7-4
+7xc	; Spade
+7xe	; Hammer bro.
+9x3	; 7-2
+9x5	; Pipe level
+9x8	; Pipe level
+9xe	; 7-3
+3x11	; Spade
+3x13	; 7-6
+3x16	; 7-7
+3x18	; Hammer bro.
+3x1a	; Pipe level
+4x1d	; Pipe level
+5x11	; Pipe level
+5x13	; Pipe level
+5x16	; Spade
+5x18	; Hammer bro.
+5x1a	; 7-8
+5x1c	; Toad house
+7x10	; 7-5
+7x12	; Pipe level
+7x16	; Pipe level
+7x18	; 7-9
+7x1a	; Hammer bro.
+7x1c	; World 7 fortress 2
+9x10	; Pipe level
+9x12	; Toad house
+9x18	; World 7 airship
+9x1a	; Hammer bro.
+9x1c	; Muncher level 2
+
+World 8
+3x8	; Pipe level
+5x2	; 7-7 (Start tile)
+5x6	; Pipe level
+5x8	; 7-7
+7x2	; 7-7
+7x4	; Tank level 1
+7x6	; 7-7
+7x8	; Boat level
+3x1a	; Pipe level
+5x12	; Pipe level
+5x14	; Airship level
+5x18	; Pipe level
+5x1a	; 7-7
+7x14	; 7-7
+7x16	; Hand level 3
+7x18	; Hand level 2
+7x1a	; Hand level 1
+7x1c	; Pipe level
+5x22	; Pipe level
+5x24	; 7-7
+5x26	; Pipe level
+5x28	; 7-7
+5x2a	; 7-7
+5x2c	; 7-7
+7x22	; 7-7
+7x24	; 8-1
+7x28	; World 8 fortress
+7x2a	; 7-7
+7x2c	; Pipe level
+9x22	; 8-2
+9x24	; Pipe level
+9x26	; 7-7
+9x28	; 7-7
+9x2a	; 7-7
+9x2c	; Pipe level
+7x32	; Pipe level
+7x34	; Tank level 2
+7x36	; 7-7
+7x38	; 7-7
+7x3a	; 7-7
+7x3c	; Bowser's castle

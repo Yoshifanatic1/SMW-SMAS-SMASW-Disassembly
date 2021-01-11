@@ -1,0 +1,492 @@
+Sprite list data
+XX YY ZZ
+XX = Sprite ID
+YY = X Position
+ZZ = Y Position
+
+Level Sprite IDs (Gotten by changing $27EAD8 to change the first goomba in 1-1)
+00 - ?? (Nothing)
+01 - ?? (Weird sprite that can be kind of pushed)
+02 - (Crashes due to incorrect return opcode. Weird sprite that bounces Mario)
+03 - ?? (Nothing)
+04 - ?? (Weird sprite that sticks to Mario)
+05 - ?? (Weird sprite that moves, hops and bounces Mario)
+06 - Vertical bounce note block sprite
+07 - 1-3 Toad House warp
+08 - Invisible P-Switch door
+09 - Airship anchor
+0A - ?? (Block that can be pushed)
+0B - 1-up Mushroom
+0C - Invincibility star/frog suit/tanooki suit/hammer suit
+0D - Mushroom
+0E - Koopa Kid
+0F - ?? (Nothing)
+10 - ?? (Nothing)
+11 - ?? (Nothing)
+12 - ?? (Nothing)
+13 - ?? (Nothing)
+14 - ?? (Nothing)
+15 - ?? (Nothing)
+16 - ?? (Nothing)
+17 - Spiny Cheep Cheep
+18 - Bowser
+19 - Fire Flower
+1A - ???
+1B - Horizontal bounce block sprite
+1C - (Crashes. Brick block that flies away and spawns a mushroom)
+1D - ?? (Nothing)
+1E - Raccoon leaf
+1F - Vine head
+20 - ?? (Nothing)
+21 - Unused mushroom card (crashes the game when touched.)
+22 - Unused fire flower card (crashes the game when touched.)
+23 - Unused star card (crashes the game when touched.)
+24 - Fast left flying cloud platform
+25 - Controller for handling warp pipe level destinations.
+26 - Platform that starts moving right when landed on.
+27 - Platform that slowly moves left and right a fixed distance
+28 - Platform that slowly moves up and down a fixed distance
+29 - Spike (the enemy that throws spike balls)
+2A - Walking piranha plant that blows on a spike ball
+2B - Kuribo's shoe
+2C - Slow left flying cloud platform
+2D - Boss bass (Follow Mario)
+2E - Elevator platform (seen in Bowser's Castle)
+2F - Boo
+30 - Walking candle flame that follows Mario
+31 - White bar boo
+32 - Upside down white bar Boo
+33 - Nipper plant that jumps when Mario is near
+34 - Mushroom house Toad
+35 - Toad house chest item
+36 - Left flying wood platform that falls when landed on
+37 - Wood Platform that quickly moves left and right a fixed distance
+38 - Wood Platform that quickly moves up and down a fixed distance
+39 - Nipper plant that hops around and jumps when Mario is near
+3A - Line-guided donut platform
+3B - Cheep-cheep that follows Mario (requires no water)
+3C - Line-guided wood platform
+3D - Nipper plant that spits fire
+3E - Buoyant platform
+3F - Dry bones
+40 - Buster beetle
+41 - End of level card
+42 - Cheep Cheep that hops around to three spots
+43 - Cheep Cheep that hops around to two spots
+44 - Wood Platform that falls when landed on
+45 - Wandering candle flame (crashes the game)
+46 - Stationary piranha plant that blows on spike ball
+47 - Giant block handler
+48 - Mini Boss Bass
+49 - BG Cloud (unused)
+4A - Goal sphere
+4B - Grounded boom boom
+4C - Flying boom boom
+4D - ?? (Nothing)
+4E - ?? (Nothing)
+4F - Chain Chomp (Free)
+50 - Bob-Omb
+51 - Roto disc (2, counterclockwise)
+52 - Mini item chest (No end level)
+53 - Upside-down podoboo
+54 - Donut block
+55 - Bob-omb (windup)
+56 - Left facing sideways piranha plant
+57 - Right facing sideways piranha plant
+58 - Fire chomp
+59 - Fire snake
+5A - Roto disc (1, clockwise)
+5B - Roto disc (1, counter clockwise)
+5C - Throw Block
+5D - Whirlwind
+5E - Roto disc (2, opposite directions, touch at left and right)
+5F - Roto disc (2, opposite directions, touch at top and bottom)
+60 - Roto disc (2, clockwise)
+61 - Blooper nanny (follows Mario)
+62 - Blooper
+63 - Boss bass (spit smaller cheep cheeps)
+64 - Water hopping Red cheep cheep
+65 - Upwards air current
+66 - Downwards air current
+67 - Volcano lotus
+68 - Upside-down buzzy beetle
+69 - Upside-down spiny
+6A - Blooper nanny (launch mini bloopers)
+6B - Jumping fake brick block
+6C - Green koopa
+6D - Red koopa
+6E - Green hopping parakoopa
+6F - Red vertical parakoopa
+70 - Buzzy beetle
+71 - Spiny
+72 - Goomba
+73 - Red paragoomba
+74 - Paragoomba (spawn mini goombas)
+75 - Bowser fire/Koopa Kid Projectile
+76 - Flying Red cheep cheep
+77 - Green cheep cheep (swims fixed distance horizontally, doesn't require water)
+78 - Bullet bill
+79 - Homing bill
+7A - Giant green koopa
+7B - Giant red koopa
+7C - Giant goomba
+7D - Giant classic piranha plant (small pipe)
+7E - Giant green hopping parakoopa
+7F - Giant classic piranha plant (large pipe)
+80 - Green horizontal flying parakoopa
+81 - Hammer bros.
+82 - Boomerang bros.
+83 - Lakitu
+84 - Red spiny egg
+85 - Green spiny egg 
+86 - Sledge bros.
+87 - Fire bros.
+88 - Yellow cheep-cheep (swims in wave, doesn't require water)
+89 - Chain chomp (chained to wall)
+8A - Thwomp (Moves down)
+8B - Thwomp (Moves left)
+8C - Thwomp (Moves right)
+8D - Thwomp (Slowly moves up and down)
+8E - Thwomp (Slowly moves diagonally \)
+8F - Thwomp (Slowly moves diagonally /)
+90 - Rotating pea platform (rotates when stood on)
+91 - Rotating pea platform (always rotates)
+92 - Rotating pea platform (stops and rotates clockwise)
+93 - Rotating pea platform (stops and rotates counterclockwise)
+94 - Giant ? Block (contains 3 1-ups)
+95 - Giant ? Block (contains mushroom)
+96 - Giant ? Block (contains fire flower)
+97 - Giant ? Block (contains raccoon leaf)
+98 - Giant ? Block (contains tanooki suit)
+99 - Giant ? Block (contains frog suit)
+9A - Giant ? Block (contains hammer suit)
+9B - ?? (Nothing)
+9C - ?? (Nothing)
+9D - Upwards spawning flame
+9E - Podoboo
+9F - Parabuzzy
+A0 - Green classic piranha plant
+A1 - Red upside down piranha plant
+A2 - Red classic piranha plant
+A3 - Red upside down classic piranha plant
+A4 - Green classic venus fire trap
+A5 - Red upside down venus fire trap
+A6 - Red classic venus fire trap
+A7 - Red upside down venus fire trap
+A8 - Upwards moving outline platform
+A9 - Outline platform that changes direction when landed on
+AA - Airship propeller
+AB - ?? (Nothing? It's loaded in the world 3 airship)
+AC - Leftwards spawning flame
+AD - Rocky wrench
+AE - Metal lugnut
+AF - Angry sun
+B0 - Big Cannon ball
+B1 - Rightwards spawning flame
+B2 - Downwards spawning flame
+B3 - ?? (Weird enemy that flies left and kills on contact)
+
+B4 - Red cheep-cheep generator
+B5 - Spiny Cheep-cheep generator
+B6 - Disable Generators and lakitu
+B7 - Unused Green Parabuzzy generator
+B8 - Random BG Cloud generator (unused)
+B9 - Left moving platform that falls when landed on generator
+BA - Spawn Mini item chest (End level)
+BB - Disable Generators
+
+BC - Bullet bill shooter
+BD - Homing bill shooter
+BE - Rocky wrench spawner
+BF - Rotating cannonball shooter
+C0 - Left facing pipe spawning goombas
+C1 - Right facing pipe spawning goombas
+C2 - Left facing cannonball shooter
+C3 - Left facing big cannonball shooter
+C4 - Diagonally up left facing cannonball shooter
+C5 - Diagonally up right facing cannonball shooter
+C6 - Diagonally down left facing cannonball shooter
+C7 - Diagonally down right facing cannonball shooter
+C8 - Diagonally up left facing cannonball shooter
+C9 - Diagonally up right facing cannonball shooter
+CA - Diagonally down left facing cannonball shooter
+CB - Diagonally down right facing cannonball shooter
+CC - Right facing cannonball shooter
+CD - Right facing big cannonball shooter
+CE - Left facing bob-omb shooter
+CF - Right facing bob-omb shooter
+D0 - Laser shooter
+
+D1 - 3 green parakoopa spawner
+D2 - 3 yellow cheep-cheep spawner
+D3 - Activate autoscrolling (Y position determines scroll type)
+D4 - ?? (Something related to spawning coin ships/blue toad houses)
+D5 - Toad and transformed king
+D6 - ?? (Something related to the mini chest items.)
+
+D7+ Crashes
+
+Notes:
+- Sprite 4A (Goal sphere kills you if used in a normal level, due to time out.
+- The giant ? blocks sprite tiles wrap around the screen
+- Bowser doesn't despawn when horizontally offscreen, but his graphics do not handle wrap around correctly.
+
+Extended Sprites
+00 - No Sprite
+01 - Hammer
+02 - Boomerang
+03 - ?? (Weird boomerang that makes no sound?)
+04 - Nipper Plant fireball
+05 - Piranha Plant fireball
+06 - Micro goomba
+07 - Spike ball
+08 - Wand Blast
+09 - Power down suit
+0A - Thrown Wrench
+0B - Small cannonball
+0C - Fire Bro fireball
+0D - Small star (Boom Boom spawns these)
+0E - Air current bubbles
+0F - Lava Lotus fireballs
+10 - Magic Wand
+11 - Spinning coin
+12 - Fire chomp fire
+13 - Brick Piece
+14 - Mini Blooper
+15 - Laser
+16 - Smoke Puff
+17 - Podoboo fire bits
+18 - Lava splash
+19+ - (Crashes)
+
+Shooter sprites
+00 - No Sprite
+01 - Bullet bill shooter
+02 - Homing bill shooter
+03 - Rocky wrench spawner
+04 - Rotating cannonball shooter
+05 - Left facing pipe spawning goombas
+06 - Right facing pipe spawning goombas
+07 - Left facing cannonball shooter
+08 - Left facing big cannonball shooter
+09 - Diagonally up left facing cannonball shooter
+0A - Diagonally up right facing cannonball shooter
+0B - Diagonally down left facing cannonball shooter
+0C - Diagonally down right facing cannonball shooter
+0D - Diagonally up left facing cannonball shooter
+0E - Diagonally up right facing cannonball shooter
+0F - Diagonally down left facing cannonball shooter
+10 - Diagonally down right facing cannonball shooter
+11 - Right facing cannonball shooter
+12 - Right facing big cannonball shooter
+13 - Left facing bob-omb shooter
+14 - Right facing bob-omb shooter
+15 - Laser shooter
+16+ - (Crashes)
+
+Overworld sprite IDs
+00 - Nothing
+01 - Help
+02 - Airship
+03 - Hammer bro.
+04 - Boomerang bro.
+05 - Sledge bro.
+06 - Fire bro.
+07 - Muncher
+08 - Unused?
+09 - N-Spade
+0A - Blue toad house
+0B - Coin ship
+0C - Unused Airship fleet (with hardcoded level)
+0D - Boat
+0E - Tank
+0F - Airship fleet
+10 - Canoe
+
+Level data
+AAAAAAAA AAAAAAAA AAAAAAAA
+BBBBBBBB BBBBBBBB BBBBBBBB
+CCC-DDDD EFFGGGHH IJJKLLLL
+MMMNNNNN OOPPQQQQ RRRRSSSS
+TTTTTTTT UUU-VVVV WWWWXXXX
+YYYYYYYY
+... (level data)
+
+Note: WWWWXXXX and YYYYYYYY can be skipped over, if -UU----- is not set and ----VVVV != $7E0211's value
+
+AAAAAAAA AAAAAAAA AAAAAAAA = 24-bit pointer to the sublevel's level data
+BBBBBBBB BBBBBBBB BBBBBBBB = 24-bit pointer to the sublevel's sprite list
+CCC = Initial player Y position
+DDDD = Number of screens in the level.
+E = Unknown
+FF = Unknown (Affects Mario's starting X position)
+GGG = Back Area color
+	000 = Black
+	001 = Blue (1-1)
+	010 = Dark Blue
+	011 = Orange
+	100 = Light Purple
+	101 = Black
+	110 = Light Blue
+	111 - Very Dark Blue
+HH = Unknown (Seems to affect palette row 06)
+I = Unknown
+JJ = Vertical Scroll Setting (Doesn't apply if K is set)
+	00 = No vertical scroll unless running/climbing/flying
+	01 = Vertical scroll at will
+	02 = No Vertical scroll
+	03 = Same as 02.
+K = Vertical Level Flag
+LLLL = Unknown (Tile set for the sublevel?)
+MMM = Entrance type
+	000 = Normal
+	001 = Sliding
+	010 = Exit pipe upwards
+	011 = Exit pipe downwards
+	100 = Exit pipe rightwards
+	101 = Exit pipe leftwards
+	110 = Do airship cutscene movements
+	111 = Die?
+PPNNNNN = FG/Sprite graphics
+	00 = Unused
+	01 = Constructed Plain (ex. 1-1)
+	02 = Fortress (ex. World 1 Fortress)
+	03 = Cave (ex. 1-5)
+	04 = Sky plain (ex. 1-4)
+	05 = Pipe level (ex. World 4 fortress 2, hidden room)
+	06 = Underwater (ex. 3-1)
+	07 = Toad house
+	08 = Pipe Level (ex. 5-2, vertical level)
+	09 = Desert (ex. 2-1)
+	0A = Airship (ex. World 1 Airship)
+	0B = Giant level (ex. 4-1)
+	0C = Snow (ex. 6-1)
+	0D = Cloud (ex. 1-3's coin heaven)
+	0E = Unused
+	0F = Spade game intro
+	10 = Sliding Tile minigame
+	11 = Card flip minigame
+	12 = 2 player duel/Battle mode
+	13 = Grass plains (ex. 1-2)
+	14 = Grassy Constructed Plain (ex 3-7)
+	15 = Tank
+	16 = Throne room
+	17 = Prison (ex. World 2 fortress)
+	18 = Angry sun
+	19 = Underwater Fortress 1 (ex. World 3 fortress 1, second room)
+	1A = Underwater Fortress 2 (ex. World 3 fortress 2, second room)
+	1B = 3-8
+	1C = Constructed Plain (ex. 4-6)
+	1D = Cave (ex. World 4 fortress 2, sublevel)
+	1E = Underwater Giant level (ex 4-4)
+	1F = Constructed Plain (ex. 5-1)
+	20 = Constructed Plain (ex. 5-3)
+	21 = Giant ? Block Bonus Room (ex. 4-5 bonus room)
+	22 = Giant ? Block Bonus Room (ex. 3-9 bonus room)
+	23 = Snow Sky (ex. 6-2)
+	24 = Cave (ex. 5-2)
+	25 = Snow Fortress (ex. World 6 fortress 2)
+	26 = Grass Plains (ex. 6-8)
+	27 = Cave (ex. 6-9)
+	28 = Desert (ex. 7-2)
+	29 = Constructed Plain (ex 7-8)
+	2A = Fortress/Castle (ex. World 7 fortress 2)
+	2B = Hand level 2
+	2C = Bowser's Castle
+	2D = Unused?
+	2E = Underwater Giant Level (ex. 4-1 sublevel)
+	2F = Giant Level (ex. World 4 hammer bro)
+
+OO = Index to the time limit table at $21CE42
+	00 = 300 seconds
+	01 = 400 seconds
+	10 = 200 seconds
+	11 = 000 seconds
+QQQQ = Index to the level music table at $21CE46
+	00 - Overworld
+	01 - Underground
+	02 - Underwater
+	03 - Fortress
+	04 - Boss battle
+	05 - Airship
+	06 - Hammer bros. battle
+	07 - Toad House	(used on the overworld)
+	08 - Athletic
+	09 - Throne Room
+	0A - Sky bonus area
+	0B - Underground (used in the pipe transport levels)
+	0C-0F - Garbage. Do not use.
+
+RRRR = Layer 3 palette
+SSSS = Something BG related (layer 3?)
+TTTTTTTT = Layer 2 BG
+	00 = None
+	01 = Underwater
+	02 = Glitchy clouds
+	03 = Airship interior (includes thunder)
+	04 = Cave pillars
+	05 = Screwed Panels
+	06 = Castle interior pillars
+	07 = Outer castle walls
+	08 = Snow trees
+	09 = Pipes
+	0A = Dotted hills
+	0B = Cave Rocks
+	0C = Hills and trees
+	0D = Sandy dunes
+	0E = Pyramids
+	0F = Cloudy green checkered hills
+	10 = Dungeon
+	11 = Volcanos
+	12 = Clouds
+	13 = ? Tiles
+	14 = Crystal cave
+	15 = Cave Rocks
+	16 = Waterfall hills
+	17 = Toad house
+	18 = Snowy cloudy green checkered hills
+	19 = Orange brick
+	1A = Screwed Panels (slightly glitched)
+	1B = Bowser's castle (Portraits)
+	1C = Leaves
+	1D = Cloudy orange checkered hills
+	1E = Waterfall hills
+	1F = Dungeon (red glow)
+	20 = Red striped brick
+	21 = Underwater
+	22 = Bowser's castle (Barred windows)
+	23 = Glitchy clouds
+	24 = Airship interior (no thunder)
+	25 = Underwater
+	26+ = (Freeze)
+
+UUU = Unknown
+VVVV = Unknown
+WWWW = Unknown
+XXXX = Unknown
+YYYYYYYY = Unknown
+
+Note: The tile set seems to be handled in a weird way depending on whether the level is a main level or sublevel.
+For main levels, a 16-bit pointer from $21D87D is read based on the world number, and whatever is used to index levels in the table that's read afterwards. The lower 4 bits read are the tile set.
+
+Tile set:
+	00 = Overworld
+	01 = Constructed Plain
+	02 = Throne Room/Fortress/Bowser's Castle
+	03 = Grassy Plain
+	04 = Sky Plain
+	05 = Pipe
+	06 = Snow Plain/Underwater
+	07 = Toad House
+	08 = Pyramid/Prison
+	09 = Desert
+	0A = Airship/Tank
+	0B = Giant
+	0C = Snowy Sky
+	0D = Cloud
+	0E = Underground/Bonus room
+	0F = Spade level?
+	10 = Unknown
+	11 = Sliding picture minigame?
+	12 = Battle mode
+	13+ = Invalid

@@ -6731,10 +6731,10 @@ SMB3_ProcessPart1OfEnding:
 	LDY.w #SMB3_PaletteMirror[$10].LowByte
 	LDA.w #$001F
 	MVN SMB3_PaletteMirror[$10].LowByte>>16,DATA_3CA8C0>>16
-	LDX.w #SMB3TitleScreenPalette_Row08To0C
+	LDX.w #SMB3_GlobalSpritePalette_Row08To0C
 	LDY.w #SMB3_PaletteMirror[$80].LowByte
 	LDA.w #$009F
-	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3TitleScreenPalette_Row08To0C>>16
+	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3_GlobalSpritePalette_Row08To0C>>16
 	LDX.w #DATA_3C8BE0
 	LDY.w #SMB3_PaletteMirror[$D0].LowByte
 	LDA.w #$001F
@@ -20122,7 +20122,7 @@ DATA_21EF09:
 	dw RegularLuigiPalette
 	dw TanookiSuitPalette
 	dw HammerSuitPalette
-	dw SMB3TitleScreenPalette_Row08To0C
+	dw SMB3_GlobalSpritePalette_Row08To0C
 	dw RegularMarioPalette
 
 	dw RegularLuigiPalette
@@ -20132,7 +20132,7 @@ DATA_21EF09:
 	dw RegularLuigiPalette
 	dw TanookiSuitPalette
 	dw HammerSuitPalette
-	dw SMB3TitleScreenPalette_Row08To0C
+	dw SMB3_GlobalSpritePalette_Row08To0C
 	dw RegularLuigiPalette
 
 ;--------------------------------------------------------------------
@@ -85080,10 +85080,10 @@ CODE_29C82B:
 	MVN SMB3_PaletteMirror[$00].LowByte>>16,UnknownPaletteData01_Row00>>16
 	PLB
 	PHB
-	LDX.w #SMB3TitleScreenPalette_Row08To0C
+	LDX.w #SMB3_GlobalSpritePalette_Row08To0C
 	LDY.w #SMB3_PaletteMirror[$80].LowByte
 	LDA.w #$009F
-	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3TitleScreenPalette_Row08To0C>>16
+	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3_GlobalSpritePalette_Row08To0C>>16
 	PLB
 	LDA.w !RAM_SMB3_Global_TilesetFromHeader
 	AND.w #$00FF
@@ -85579,10 +85579,10 @@ CODE_29CCB6:
 CODE_29CCF8:
 	REP.b #$30
 	PHB
-	LDX.w #SMB3TitleScreenPalette_Row08To0C
+	LDX.w #SMB3_GlobalSpritePalette_Row08To0C
 	LDY.w #SMB3_PaletteMirror[$80].LowByte
 	LDA.w #$009F
-	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3TitleScreenPalette_Row08To0C>>16
+	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3_GlobalSpritePalette_Row08To0C>>16
 	LDX.w #DATA_3C8BE0
 	LDY.w #SMB3_PaletteMirror[$D0].LowByte
 	LDA.w #$001F
@@ -85736,10 +85736,10 @@ CODE_29CE95:
 	LDY.w #$7F9400
 	LDA.w #$00FF
 	MVN $7F9400>>16,DATA_3CAC00>>16
-	LDX.w #SMB3TitleScreenPalette_Row08To0C
+	LDX.w #SMB3_GlobalSpritePalette_Row08To0C
 	LDY.w #$7F9500
 	LDA.w #$007F
-	MVN $7F9500>>16,SMB3TitleScreenPalette_Row08To0C>>16
+	MVN $7F9500>>16,SMB3_GlobalSpritePalette_Row08To0C>>16
 	LDX.w #DATA_3C8A20
 	LDY.w #$7F9580
 	LDA.w #$001F
@@ -85858,10 +85858,10 @@ CODE_29CF82:
 CODE_29CFB6:
 	REP.b #$30
 	PHB
-	LDX.w #SMB3TitleScreenPalette_Row08To0C+$40
+	LDX.w #SMB3_GlobalSpritePalette_Row08To0C+$40
 	LDY.w #$7F9540
 	LDA.w #$001F
-	MVN $7F9540>>16,SMB3TitleScreenPalette_Row08To0C+$40>>16
+	MVN $7F9540>>16,SMB3_GlobalSpritePalette_Row08To0C+$40>>16
 	PLB
 	STZ.w $02B3
 	LDA.w #$0000
@@ -104134,10 +104134,10 @@ namespace SMB3_BufferTitleScreenSpritePalettes
 Main:
 	REP.b #$30
 	PHB
-	LDX.w #SMB3TitleScreenPalette_Row08To0C
+	LDX.w #SMB3_GlobalSpritePalette_Row08To0C
 	LDY.w #SMB3_PaletteMirror[$80].LowByte
-	LDA.w #SMB3TitleScreenPalette_Row08To0CEnd-SMB3TitleScreenPalette_Row08To0C-$01
-	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3TitleScreenPalette_Row08To0C>>16
+	LDA.w #SMB3_GlobalSpritePalette_Row08To0CEnd-SMB3_GlobalSpritePalette_Row08To0C-$01
+	MVN SMB3_PaletteMirror[$80].LowByte>>16,SMB3_GlobalSpritePalette_Row08To0C>>16
 	LDX.w #SMB3TitleScreenPalette_Row0DTo0E
 	LDY.w #SMB3_PaletteMirror[$D0].LowByte
 	LDA.w #SMB3TitleScreenPalette_Row0DTo0EEnd-SMB3TitleScreenPalette_Row0DTo0E-$01
@@ -126503,10 +126503,10 @@ macro DATATABLE_RT00_SMB3_Palettes(Address)
 
 SMB3_Palettes_Main:
 
-SMB3TitleScreenPalette_Row08To0C:
+SMB3_GlobalSpritePalette_Row08To0C:
 ;$3C8800
-	incbin "Palettes/TitleScreenPalette_Row08To0C.bin"
-SMB3TitleScreenPalette_Row08To0CEnd:
+	incbin "Palettes/GlobalSpritePalette_Row08To0C.bin"
+SMB3_GlobalSpritePalette_Row08To0CEnd:
 
 RegularMarioPalette:
 ;$3C88A0
